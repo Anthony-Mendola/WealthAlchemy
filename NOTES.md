@@ -7,6 +7,9 @@ id: INT
 affiliate: INT (FOREIGN KEY [affiliate])
 title: STR
 industry: STR
+category: STR
+originator: STR
+location: STR
 description: TEXT
 minimum: INT
 annual_interest: INT
@@ -31,6 +34,7 @@ description: TEXT
 email: STR
 phone: STR
 is_mvp: BOOL [0]
+Experience: STR
 
 
 
