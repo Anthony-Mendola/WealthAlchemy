@@ -28,8 +28,14 @@
           >
           <a class="nav-link" href="{% url 'about' %}">About</a>
         </li>
-        <li class="nav-item mr-3">
-          <a class="nav-link" href="offerings.html">Featured Offerings</a>
+        <li
+            {% if 'offerings' in request.path %}
+              class="nav-item active mr-3"
+            {% else %}
+              class="nav-item mr-3"
+            {% endif %}
+          >
+          <a class="nav-link" href="{% url 'offerings' %}">Featured Offerings</a>
         </li>
       </ul>
 
