@@ -52,15 +52,15 @@
                   <hr>
                   <div class="row py-2 text-secondary">
                     <div class="col-6">
-                      <i class="fas fa-th-large"></i> %{{ offering.annual_interest }}</div>
+                      <i class="fas fa-percent"></i> {{ offering.annual_interest }} Return</div>
                     <div class="col-6">
-                      <i class="fas fa-car"></i> {{ offering.term }} months</div>
+                      <i class="fas fa-calendar"></i> {{ offering.term }} months</div>
                   </div>
                   <div class="row py-2 text-secondary">
                     <div class="col-6">
-                      <i class="fas fa-bed"></i> Size: {{ offering.minimum_investment | intcomma}}</div>
+                      <i class="fas fa-university"></i> Min: ${{ offering.minimum_investment | intcomma}}</div>
                     <div class="col-6">
-                      <i class="fas fa-bath"></i> Funded: {{ offering.current_funded | intcomma }}</div>
+                      <i class="fa fa-briefcase"></i> Funded: ${{ offering.current_funded | intcomma }}</div>
                   </div>
                   <hr>
                   <div class="row py-2 text-secondary">
@@ -79,7 +79,7 @@
           {% endfor %}
         {% else %}
           <div class="col-md-12">
-            <p>No offerings Available</p>
+            <p>No Offerings Available</p>
           </div>
         {% endif %}
       </div>
