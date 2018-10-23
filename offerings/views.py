@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+
 from .models import Offering
 
 def index(request):
-  offerings = Offering.objects.all()
+  offerings = Offering.objects.order_by('-offer_date')
 
-  paginator = Paginator(offerings, 6)
+  paginator = Paginator(offerings, 3)
   page = request.GET.get('page')
-  page_offerings = paginator.get_page(page)
+  paged_offerings = paginator.get_page(page)
 
   context = {
     'offerings': paged_offerings
