@@ -29,14 +29,14 @@
     </div>
   </section>
 
-   <!-- Listings -->
-   <section id="listings" class="py-4">
+   <!-- Offerings -->
+   <section id="offerings" class="py-4">
     <div class="container">
-      <div class="row">
+      <div class="row equal">
         {% if offerings %}
           {% for offering in offerings %}
-          <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card listing-preview">
+          <div class="col-md-6 col-lg-4 mb-4 equal">
+              <div class="card offering-preview equal">
                 <img class="card-img-top" src="{{ offering.photo_main.url }}" alt="">
                 <div class="card-img-overlay">
                   <h2>
@@ -44,7 +44,7 @@
                   </h2>
                 </div>
                 <div class="card-body">
-                  <div class="listing-heading text-center">
+                  <div class="offering-heading text-center">
                     <h4 class="text-primary">{{ offering.title }}</h4>
                     <p>
                       <i class="fas fa-map-marker text-secondary"></i> {{ offering.industry }} <hr> {{ offering.category }} <hr> {{ offering.location }} </p>
@@ -72,7 +72,7 @@
                       <i class="fas fa-clock"></i> {{ offering.offer_date | timesince }}</div>
                   </div>
                   <hr>
-                  <a href="{% url 'offering' offering.id %}" class="btn btn-primary btn-block">More Info</a>
+                  <a href="{% url 'offering' offering.id %}" class="btn btn-primary btn-block equal">More Info</a>
                 </div>
               </div>
             </div>

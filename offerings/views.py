@@ -4,7 +4,7 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .models import Offering
 
 def index(request):
-  offerings = Offering.objects.order_by('-offer_date')
+  offerings = Offering.objects.order_by('-offer_date').filter(is_published=True)
 
   paginator = Paginator(offerings, 3)
   page = request.GET.get('page')
