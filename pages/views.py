@@ -14,7 +14,7 @@ def index(request):
 
 def about(request):
   #get all affiliates
-    affiliates = Affiliate.objects.order_by('-hire_date')
+    affiliates = Affiliate.objects.order_by('-experience')
 
 
     #get affiliate of the month

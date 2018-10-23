@@ -43,20 +43,22 @@
           commodi id libero eveniet harum perferendis laborum molestias quia.</p>
       </div>
       <div class="col-md-4">
-        <div class="card">
-          <img class="card-img-top" src="assets/img/affiliates/yieldstreet.jpg" alt="Company of the month">
-          <div class="card-body">
-            <h5 class="card-title">Company Of The Month</h5>
-            <h6 class="text-secondary">YieldStreet</h6>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nesciunt amet, illo
-              itaque similique repellat.
-              content.
-            </p>
-          </div>
+          {% if mvp_affiliates %}
+            {% for affiliate in mvp_affiliates %}
+            <div class="card">
+                <img class="card-img-top" src="{{ affiliate.photo.url }}" alt="Seller of the month">
+                <div class="card-body">
+                  <h5 class="card-title">Seller Of The Month</h5>
+                  <h6 class="text-secondary">{{ affiliate.name }}</h6>
+                  <p class="card-text">{{ affiliate.description }}
+                  </p>
+                </div>
+              </div>
+            {% endfor %}
+          {% endif %}
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 <!-- Work -->
@@ -67,45 +69,31 @@
   <a href="offerings.html" class="btn btn-secondary text-white btn-lg">View Our Featured offerings</a>
 </section>
 
-<!-- Team -->
+<!-- All Affilaites -->
 <section id="team" class="py-5">
-  <div class="container">
-    <h2 class="text-center">Our Team</h2>
-    <div class="row text-center">
-      <div class="col-md-4">
-        <img src="assets/img/affiliates/yieldstreet.jpg" alt="" class="rounded-circle mb-3">
-        <h4>Yield Street</h4>
-        <p class="text-success">
-          <i class="fas fa-award text-success mb-3"></i> Realtor</p>
-        <hr>
-        <p>
-          <i class="fas fa-phone"></i> (555)-555-5555</p>
-        <p>
-          <i class="fas fa-envelope-open"></i> kyle@wealthalchemy.co</p>
-      </div>
-
-      <div class="col-md-4">
-        <img src="assets/img/affiliates/RealtyShares.jpg" alt="" class="rounded-circle mb-3">
-        <h4>RealtyShares</h4>
-        <p class="text-success">Realtor</p>
-        <hr>
-        <p>
-          <i class="fas fa-phone"></i> (444)-444-4444</p>
-        <p>
-          <i class="fas fa-envelope-open"></i> mark@wealthalchemy.co</p>
-      </div>
-
-      <div class="col-md-4">
-        <img src="assets/img/affiliates/rallyrd.jpg" alt="" class="rounded-circle mb-3">
-        <h4>RallyRD</h4>
-        <p class="text-success">Realtor</p>
-        <hr>
-        <p>
-          <i class="fas fa-phone"></i> (333)-333-3333</p>
-        <p>
-          <i class="fas fa-envelope-open"></i> jenny@wealthalchemy.co</p>
+    <div class="container">
+      <h2 class="text-center">Our Partners</h2>
+      <div class="row text-center">
+        {% if affiliates %}
+          {% for affiliate in affiliates %}
+          <div class="col-md-4">
+              <img src="{{ affiliate.photo.url }}" alt="" class="rounded-circle mb-3">
+              <h4>{{ affiliate.name }}</h4>
+              <p class="text-success">
+                <i class="fas fa-award text-success mb-3"></i> Affiliate</p>
+              <hr>
+              <p>
+                <i class="fas fa-phone"></i> {{ affiliate.phone }}</p>
+              <p>
+                <i class="fas fa-envelope-open"></i> {{ affiliate.email }}</p>
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="col-md-12">
+            <p>No affiliates Available</p>
+          </div>
+        {% endif %}       
       </div>
     </div>
-  </div>
-</section>
+  </section>
 {% endblock %}
