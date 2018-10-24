@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from offerings.choices import interest_choices, minimum_choices, term_choices, industry_choices
 
 from affiliates.models import Affiliate
 from offerings.models import Offering
@@ -8,7 +9,12 @@ def index(request):
     offerings = Offering.objects.order_by('-offer_date').filter(is_published=True)[:3]
 
     context = {
-      'offerings': offerings
+      'offerings': offerings,
+      'interest_choices': interest_choices,
+      'minimum_choices': minimum_choices,
+      'term_choices': term_choices,
+      'industry_choices': industry_choices
+
     }
     return render(request, 'pages/index.html', context)
 
