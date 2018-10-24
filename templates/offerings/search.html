@@ -42,7 +42,7 @@
          <div class="form-row">
               <div class="col-md-6 mb-3">
                 <label class="sr-only">Interest</label>
-                <select name="interest" class="form-control">
+                <select name="annual_interest" class="form-control">
                   <option selected="true" disabled="disabled">Annual Interest (All)</option>
                   {% for key,value in interest_choices.items %}
                   <option value="{{ key }}">{{ value }}</option>
@@ -50,7 +50,7 @@
                 </select>
               </div>
               <div class="col-md-6 mb-3">
-                <select name="minimum" class="form-control" id="type">
+                <select name="minimum_investment" class="form-control" id="type">
                   <option selected="true" disabled="disabled">Minimum Investment (Any)</option>
                   {% for key,value in minimum_choices.items %}
                   <option value="{{ key }}">{{ value }}</option>
@@ -102,7 +102,7 @@
                 <div class="offering-heading text-center">
                   <h4 class="text-primary">{{ offering.title }}</h4>
                   <p>
-                    <i class="fas fa-map-marker text-secondary"></i> {offering.industry }} <hr> {{ offering.category }} <hr> {{ offering.location }} </p>
+                    <i class="fas fa-map-marker text-secondary"></i> {{offering.industry }} <hr> {{ offering.category }} <hr> {{ offering.location }} </p>
                 </div>
                 <hr>
                 <div class="row py-2 text-secondary">
