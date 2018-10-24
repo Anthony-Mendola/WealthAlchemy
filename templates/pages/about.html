@@ -63,21 +63,23 @@
 
 <!-- Work -->
 <section id="work" class="bg-dark text-white text-center">
-  <h2 class="display-4">We Work For You</h2>
-  <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
+  <h2 class="display-4">Access to the Best Investments!</h2>
+  <h4>Setting up multiple income streams is the formula to financial freedom!</h4>
   <hr>
-  <a href="offerings.html" class="btn btn-secondary text-white btn-lg">View Our Featured offerings</a>
+  <a href="{% url 'offerings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Offerings</a>
 </section>
 
 <!-- All Affilaites -->
+<!-- 
 <section id="team" class="py-5">
     <div class="container">
       <h2 class="text-center">Our Partners</h2>
-      <div class="row text-center">
+      <div class="row text-center row-flex">
         {% if affiliates %}
           {% for affiliate in affiliates %}
-          <div class="col-md-4">
-              <img src="{{ affiliate.photo.url }}" alt="" class="rounded-circle mb-3">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="content">
+              <img src="{{ affiliate.photo.url }}" alt="" class="rounded-circle mb-3 equal">
               <h4>{{ affiliate.name }}</h4>
               <p class="text-success">
                 <i class="fas fa-award text-success mb-3"></i> Affiliate</p>
@@ -86,14 +88,49 @@
                 <i class="fas fa-phone"></i> {{ affiliate.phone }}</p>
               <p>
                 <i class="fas fa-envelope-open"></i> {{ affiliate.email }}</p>
-            </div>
+            
+          </div>
+        </div>
           {% endfor %}
         {% else %}
           <div class="col-md-12">
             <p>No affiliates Available</p>
-          </div>
-        {% endif %}       
-      </div>
+          
+        </div>
+        {% endif %}   
+      </div>    
     </div>
   </section>
+  -->
+
+    <!-- Affiliates -->
+    <section id="team" class="py-5">
+        <div class="container">
+          <div class="row">
+              {% if affiliates %}
+              {% for affiliate in affiliates %}
+              <div class="col-md-6 col-lg-4 mb-4 equal">
+                  <div class="card offering-preview">
+                      <img src="{{ affiliate.photo.url }}" alt="" class="mb-3 img-fluid">
+                    <div class="card-body">
+                      <div class="text-center">
+                        <h4 class="text-primary">{{ affiliate.name }}</h4>
+                        <p>
+                            <i class="fas fa-phone"></i> {{ affiliate.phone }} </p>
+                            <p>
+                                <i class="fas fa-envelope-open"></i> {{ affiliate.email }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            {% else %}
+              <div class="col-md-12">
+                <p>No Affiliates Available</p>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </section>
+
 {% endblock %}
