@@ -22,7 +22,11 @@
                 <select name="term" class="form-control">
                 <option selected="true" disabled="disabled">Term Months (All)</option>
                  {% for key,value in term_choices.items %}
-                 <option value="{{ key }}">{{ value }}</option>
+                 <option value="{{ key }}"
+                    {% if key == values.term %}
+                    selected
+                  {% endif %}
+                  >{{ value }}</option>
                  {% endfor %}
                 </select>
               </div>
@@ -32,7 +36,11 @@
                 <select name="industry" class="form-control">
                 <option selected="true" disabled="disabled">Industry (All)</option>
                  {% for key,value in industry_choices.items %}
-                 <option value="{{ key }}">{{ value }}</option>
+                 <option value="{{ key }}"
+                    {% if key == values.industry %}
+                    selected
+                  {% endif %}
+                  >{{ value }}</option>
                  {% endfor %}
                 </select>
               </div>
@@ -45,7 +53,11 @@
                 <select name="annual_interest" class="form-control">
                   <option selected="true" disabled="disabled">Annual Interest (All)</option>
                   {% for key,value in interest_choices.items %}
-                  <option value="{{ key }}">{{ value }}</option>
+                  <option value="{{ key }}"
+                      {% if key == values.annual_interest %}
+                      selected
+                    {% endif %}
+                    >{{ value }}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -53,7 +65,11 @@
                 <select name="minimum_investment" class="form-control" id="type">
                   <option selected="true" disabled="disabled">Minimum Investment (Any)</option>
                   {% for key,value in minimum_choices.items %}
-                  <option value="{{ key }}">{{ value }}</option>
+                  <option value="{{ key }}"
+                      {% if key == values.minimum_investment %}
+                      selected
+                    {% endif %}
+                    >{{ value }}</option>
                   {% endfor %}
                 </select>
               </div>
