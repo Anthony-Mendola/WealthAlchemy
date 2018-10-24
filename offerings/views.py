@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from .choices import interest_choices, minimum_choices, term_choices, industry_choices
 
 from .models import Offering
 
@@ -18,12 +19,18 @@ def index(request):
 def offering(request, offering_id):
   offering = get_object_or_404(Offering, pk=offering_id)
 
-  context= {
+  context = {
     'offering': offering
   }
 
   return render(request, 'offerings/offering.html', context)
 
 def search(request):
-  return render(request, 'offerings/search.html')
+  context = {
+     'interest_choices': interest_choices,
+      'minimum_choices': minimum_choices,
+      'term_choices': term_choices,
+      'industry_choices': industry_choices
+  }
+  return render(request, 'offerings/search.html', context)
 
