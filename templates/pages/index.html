@@ -51,7 +51,7 @@
               <div class="col-md-6 mb-3">
                 <label class="sr-only">Interest</label>
                 <select name="annual_interest" class="form-control">
-                  <option selected="true" disabled="disabled">Annual Interest (All)</option>
+                  <option selected="true" disabled="disabled">Annual Interest % (All)</option>
                   {% for key,value in interest_choices.items %}
                   <option value="{{ key }}">{{ value }}</option>
                   {% endfor %}
@@ -85,7 +85,7 @@
           {% if offerings %}
             {% for offering in offerings %}
               <!-- Offerings -->
-              <div class="col-md-6 col-lg-4 mb-4">
+              <div class="col-md-6 col-lg-4 mb-4 equal">
                 <div class="card offering-preview">
                   <img class="card-img-top" src="{{ offering.photo_main.url }}" alt="">
                   <div class="card-img-overlay">
@@ -97,9 +97,9 @@
                     <div class="offering-heading text-center">
                       <h4 class="text-primary">{{ offering.title }}</h4>
                       <p>
-                        <i class="fas fa-map-marker text-secondary"></i> {offering.industry }} <hr> {{ offering.category }} <hr> {{ offering.location }} </p>
+                        <i class="fas fa-map-marker text-secondary"></i> {{offering.industry }} <hr> {{ offering.category }} <hr> {{ offering.location }} </p>
                     </div>
-                    <hr>
+                 
                     <div class="row py-2 text-secondary">
                         <div class="col-6">
                           <i class="fas fa-percent"></i> {{ offering.annual_interest }} Return</div>
@@ -143,23 +143,20 @@
           <div class="col-md-4">
             <i class="fas fa-comment fa-4x mr-4"></i>
             <hr>
-            <h3>Consulting Services</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-              hic dignissimos ratione ea quae.</p>
+            <h3>Financial Planning</h3>
+            <p>Our financial services are comprehensive. We employ CFAs, CPAs, money managers, and attorneys to deliver] a team of credentialed, educated, experienced, and action-oriented advisors.</p>
           </div>
           <div class="col-md-4">
             <i class="fas fa-home fa-4x mr-4"></i>
             <hr>
-            <h3>Propery Management</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-              hic dignissimos ratione ea quae.</p>
+            <h3>Investment Management</h3>
+            <p>We excel in the investment management industry because it is at the core of our services. We have extensive experience managing asset classes in all markets. We do not experiment with our clients’ money, and we do not invest based on a hunch. </p>
           </div>
           <div class="col-md-4">
             <i class="fas fa-suitcase fa-4x mr-4"></i>
             <hr>
-            <h3>Renting & Selling</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-              hic dignissimos ratione ea quae.</p>
+            <h3>Wealth Management</h3>
+            <p>For most clients, we focus on capital preservation followed by growth. But every plan is customized for each investor’s individual unique circumstances. We analyze all aspects of a client’s current financial situation and desired outcomes before constructing a portfolio.</p>
           </div>
         </div>
       </div>

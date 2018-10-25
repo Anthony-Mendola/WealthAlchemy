@@ -10,7 +10,7 @@
     <div class="row text-center">
       <div class="col-md-12">
         <h1 class="display-4">About Wealth Alchemy</h1>
-        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+        <p class="lead"></p>
       </div>
     </div>
   </div>
@@ -36,21 +36,17 @@
     <div class="row">
       <div class="col-md-8">
         <h2>The only place where you can find the perfect investment!</h2>
-        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+        <p class="lead">WealthAlchemy provides investors direct, low cost access to high-yield consumer loans from creditworthy borrowers.</p>
         <img src="{% static 'img/about.jpg' %}" alt="">
-        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia
-          repudiandae ad saepe ex, amet
-          neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at
-          quaerat
-          commodi id libero eveniet harum perferendis laborum molestias quia.</p>
+        <p class="mt-4">Whether you would like to retire early or insulate your portfolio against an uncertain stock market, our goal is to help you grow and protect your wealth.</p>
       </div>
       <div class="col-md-4">
           {% if mvp_affiliates %}
             {% for affiliate in mvp_affiliates %}
             <div class="card">
-                <img class="card-img-top" src="{{ affiliate.photo.url }}" alt="Seller of the month">
+                <img class="card-img-top" src="{{ affiliate.photo.url }}" alt="Affiliate of the month">
                 <div class="card-body">
-                  <h5 class="card-title">Seller Of The Month</h5>
+                  <h5 class="card-title">Affiliate Of The Month</h5>
                   <h6 class="text-secondary">{{ affiliate.name }}</h6>
                   <p class="card-text">{{ affiliate.description }}
                   </p>
@@ -71,57 +67,25 @@
   <a href="{% url 'offerings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Offerings</a>
 </section>
 
-<!-- All Affilaites -->
-<!-- 
-<section id="team" class="py-5">
-    <div class="container">
-      <h2 class="text-center">Our Partners</h2>
-      <div class="row text-center row-flex">
-        {% if affiliates %}
-          {% for affiliate in affiliates %}
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="content">
-              <img src="{{ affiliate.photo.url }}" alt="" class="rounded-circle mb-3 equal">
-              <h4>{{ affiliate.name }}</h4>
-              <p class="text-success">
-                <i class="fas fa-award text-success mb-3"></i> Affiliate</p>
-              <hr>
-              <p>
-                <i class="fas fa-phone"></i> {{ affiliate.phone }}</p>
-              <p>
-                <i class="fas fa-envelope-open"></i> {{ affiliate.email }}</p>
-            
-          </div>
-        </div>
-          {% endfor %}
-        {% else %}
-          <div class="col-md-12">
-            <p>No affiliates Available</p>
-          
-        </div>
-        {% endif %}   
-      </div>    
-    </div>
-  </section>
-  -->
-
     <!-- Affiliates -->
     <section id="team" class="py-5">
         <div class="container">
+         <h2 class="text-center mb-3">Our Partners & Affiliates</h2>
+         <br>
           <div class="row">
               {% if affiliates %}
               {% for affiliate in affiliates %}
               <div class="col-md-6 col-lg-4 mb-4 equal">
                   <div class="card offering-preview">
-                      <img src="{{ affiliate.photo.url }}" alt="" class="mb-3 img-fluid">
-                    <div class="card-body">
+                      <div class="card-body">
+                      <img src="{{ affiliate.photo.url }}" alt="" class="mb-3">
+                      </div>
                       <div class="text-center">
                         <h4 class="text-primary">{{ affiliate.name }}</h4>
                         <p>
                             <i class="fas fa-phone"></i> {{ affiliate.phone }} </p>
                             <p>
                                 <i class="fas fa-envelope-open"></i> {{ affiliate.email }}</p>
-                      </div>
                     </div>
                   </div>
                 </div>
