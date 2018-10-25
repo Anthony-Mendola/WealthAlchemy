@@ -27,13 +27,13 @@ def contact(request):
     contact.save()
 
     #send email
-    # send_mail(
-    #   'Investment Offering Inquiry',
-    #   'There has been an inquiry for ' + offering + '. Sign into the admin panel for more info.'
-    #   'wealthyalchemy@gmail.com'
-    #   ['affiliate_email'],
-    #   fail_silently=False
-    # )
+    send_mail(
+      'Investment Offering Inquiry',
+      'There has been an inquiry for ' + offering + '. Sign into the admin panel for more info.'
+      'wealthyalchemy@gmail.com'
+      ['affiliate_email'],
+      fail_silently=False
+    )
 
     messages.success(request, 'Your request has been submitted, a affiliate will get back to you soon')
     return redirect('/offerings/'+offering_id)
