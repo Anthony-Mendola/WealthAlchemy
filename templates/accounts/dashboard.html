@@ -38,7 +38,7 @@
         <div class="col-md-12">
           <h2>Welcome {{ user.first_name }}</h2>
           {% if contacts %}
-            <p>Here are the property listings that you have inquired about</p>
+            <p>Here are the property offerings that you have inquired about</p>
             <table class="table">
               <thead>
                 <tr>
@@ -51,9 +51,9 @@
                 {% for contact in contacts %}
                   <tr>
                     <td>{{ contact.id }}</td>
-                    <td>{{ contact.listing }}</td>
+                    <td>{{ contact.offering }}</td>
                     <td>
-                      <a class="btn btn-light" href="{% url 'listing' contact.listing_id %}">View Listing</a>
+                      <a class="btn btn-light" href="{% url 'offering' contact.offering_id %}">View Offering</a>
                     </td>
                   </tr>
                 {% endfor %}

@@ -4,8 +4,8 @@ from django.db import models
 from datetime import datetime
 
 class Contact(models.Model):
-  listing = models.CharField(max_length=200)
-  listing_id = models.IntegerField()
+  offering = models.CharField(max_length=200)
+  offering_id = models.IntegerField()
   name = models.CharField(max_length=200)
   email = models.CharField(max_length=100)
   phone = models.CharField(max_length=100)
