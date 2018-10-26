@@ -49,18 +49,18 @@ term_choices = {
   }
 
 industry_choices = {
-        'Agriculture': 'Agriculture',
-        'Bonds': 'Bonds',
-        'Business Loans': 'Business Loans',
-        'Currency': 'Currency',
-        'Equities': 'Equities',
-        'Health': 'Health',
-        'Legal': 'Legal',
-        'Personal Loans': 'Personal Loans',
-        'Marine': 'Marine',
-        'Real Estate': 'Real Estate',
-        'Royalties': 'Royalties'
-        'Solar Energy': 'Solar Energy',
-        'Transportation': 'Transportation',
-        'Technology': 'Technology'
+        'Agriculture':'Agriculture',
+        'Bonds':'Bonds',
+        'Business Loans':'Business Loans',
+        'Currency':'Currency',
+        'Equities':'Equities',
+        'Health':'Health',
+        'Legal':'Legal',
+        'Personal Loans':'Personal Loans',
+        'Marine':'Marine',
+        'Real Estate':'Real Estate',
+        'Royalties':'Royalties',
+        'Solar Energy':'Solar Energy',
+        'Transportation':'Transportation',
+        'Technology':'Technology'
 }

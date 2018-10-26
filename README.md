@@ -22,12 +22,11 @@ The main goals of alchemists were the transmutation of base metals into gold and
 *	Search offerings by keyword, term, annual interest, industry and minimum investment (Homepage & search page)
 * Search stays populated with your search critera
 *	List affiliates on about page with “affiliate of the month” (Control via admin)
-*	Offering page should have fields listed below
-*	Offering page should have 5 images with lightbox
-*	Lightbox should scroll through images
-*	Offering page should have a form to submit inquiry for that investment offering
+*	Offering page has ability to add up to 5 images with lightbox
+*	Lightbox scrools through images
+*	Offering page has a form to submit inquiry for that investment offering
 * User form info is auto populated from the database
-*	Form info should go to database and notify affilate(s) with an email
+*	Form info goes to the database and notifies affilate(s) with an email
 *	Frontend register/login to track inquiries
 * User dashboard keeps track of your inquiries
 *	Both unregistered and registered users can submit form. If registered, can only submit one per investment offering
