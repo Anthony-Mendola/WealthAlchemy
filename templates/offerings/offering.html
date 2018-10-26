@@ -38,7 +38,7 @@
   <!-- offering -->
   <section id="offering" class="py-4">
     <div class="container">
-      <a href="{% url 'offerings' %}" class="btn btn-light mb-4">Back To offerings</a>
+      <a href="{% url 'offerings' %}" class="btn btn-light mb-4">Back To Offerings</a>
       <div class="row">
         <div class="col-md-9">
           <!-- Home Main Image -->
@@ -97,15 +97,15 @@
                   <span class="float-right">${{ offering.offering_size | intcomma }}</span>
                 </li>
                 <li class="list-group-item text-secondary">
-                  <i class="fas fa-bed"></i> Interest:
-                  <span class="float-right">{{ offering.annual_interest }}</span>
+                  <i class="fas fa-exchange-alt"></i> Interest:
+                  <span class="float-right">{{ offering.annual_interest }}%</span>
                 </li>
                 <li class="list-group-item text-secondary">
-                  <i class="fas fa-bath"></i> Bathrooms:
+                  <i class="fas fa-calendar"></i> Term(months):
                   <span class="float-right">{{ offering.term }}</span>
                 </li>
                 <li class="list-group-item text-secondary">
-                  <i class="fas fa-car"></i> Min:
+                  <i class="fas fa-university"></i> Min:
                   <span class="float-right"> ${{ offering.minimum_investment | intcomma}}
                   </span>
                 </li>
@@ -114,15 +114,15 @@
             <div class="col-md-6">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item text-secondary">
-                  <i class="fas fa-th-large"></i> Funded:
+                  <i class="fas fa-briefcase"></i> Funded:
                   <span class="float-right">${{ offering.current_funded | intcomma }}</span>
                 </li>
                 <li class="list-group-item text-secondary">
-                  <i class="fas fa-calendar"></i> offering Date:
+                  <i class="fas fa-calendar"></i> Offering Date:
                   <span class="float-right">{{ offering.offer_date }}</span>
                 </li>
                 <li class="list-group-item text-secondary">
-                  <i class="fas fa-bed"></i> affiliate:
+                  <i class="fas fa-user"></i> Affiliate:
                   <span class="float-right">{{ offering.affiliate }}
                   </span>
                 </li>
