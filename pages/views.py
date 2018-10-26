@@ -6,7 +6,7 @@ from affiliates.models import Affiliate
 from offerings.models import Offering
 
 def index(request):
-    offerings = Offering.objects.order_by('-offer_date').filter(is_published=True)[:3]
+    offerings = Offering.objects.order_by('-offer_date').filter(is_published=True)[:6]
 
     context = {
       'offerings': offerings,
